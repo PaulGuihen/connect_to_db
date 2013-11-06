@@ -18,7 +18,7 @@ namespace ConnectToMvcMusicStore.Controllers
 
         public ActionResult Index()
         {
-            return View(db.OrderDetails.ToList());
+            return View(db.OrderDetailsDbSet.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace ConnectToMvcMusicStore.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            OrderDetails orderdetails = db.OrderDetails.Find(id);
+            OrderDetails orderdetails = db.OrderDetailsDbSet.Find(id);
             if (orderdetails == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace ConnectToMvcMusicStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.OrderDetails.Add(orderdetails);
+                db.OrderDetailsDbSet.Add(orderdetails);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -64,7 +64,7 @@ namespace ConnectToMvcMusicStore.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            OrderDetails orderdetails = db.OrderDetails.Find(id);
+            OrderDetails orderdetails = db.OrderDetailsDbSet.Find(id);
             if (orderdetails == null)
             {
                 return HttpNotFound();
@@ -93,7 +93,7 @@ namespace ConnectToMvcMusicStore.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            OrderDetails orderdetails = db.OrderDetails.Find(id);
+            OrderDetails orderdetails = db.OrderDetailsDbSet.Find(id);
             if (orderdetails == null)
             {
                 return HttpNotFound();
@@ -108,8 +108,8 @@ namespace ConnectToMvcMusicStore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            OrderDetails orderdetails = db.OrderDetails.Find(id);
-            db.OrderDetails.Remove(orderdetails);
+            OrderDetails orderdetails = db.OrderDetailsDbSet.Find(id);
+            db.OrderDetailsDbSet.Remove(orderdetails);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

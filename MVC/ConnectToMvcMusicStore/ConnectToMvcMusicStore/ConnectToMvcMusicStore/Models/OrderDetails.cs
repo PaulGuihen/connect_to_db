@@ -29,6 +29,6 @@ namespace ConnectToMvcMusicStore.Models
 
         public DbSet<OrderDetails> OrderDetailsDbSet { get; set; }
 
-        public DbSet<OrderDetails> OrderDetails { get; set; }
+        //public DbSet<OrderDetails> OrderDetails { get; set; }
     }
 }
