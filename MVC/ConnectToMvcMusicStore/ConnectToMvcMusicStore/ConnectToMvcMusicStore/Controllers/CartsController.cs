@@ -9,33 +9,33 @@ using ConnectToMvcMusicStore.Models;
 
 namespace ConnectToMvcMusicStore.Controllers
 {
-    public class GenreController : Controller
+    public class CartsController : Controller
     {
-        private GenresDBContext db = new GenresDBContext();
+        private CartsDBContext db = new CartsDBContext();
 
         //
-        // GET: /Genre/
+        // GET: /Carts/
 
         public ActionResult Index()
         {
-            return View(db.GenresDbSet.ToList());
+            return View(db.CartsDbSet.ToList());
         }
 
         //
-        // GET: /Genre/Details/5
+        // GET: /Carts/Details/5
 
         public ActionResult Details(int id = 0)
         {
-            Genres genres = db.GenresDbSet.Find(id);
-            if (genres == null)
+            Carts carts = db.CartsDbSet.Find(id);
+            if (carts == null)
             {
                 return HttpNotFound();
             }
-            return View(genres);
+            return View(carts);
         }
 
         //
-        // GET: /Genre/Create
+        // GET: /Carts/Create
 
         public ActionResult Create()
         {
@@ -43,81 +43,73 @@ namespace ConnectToMvcMusicStore.Controllers
         }
 
         //
-        // POST: /Genre/Create
+        // POST: /Carts/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Genres genres)
+        public ActionResult Create(Carts carts)
         {
             if (ModelState.IsValid)
             {
-                db.GenresDbSet.Add(genres);
+                db.CartsDbSet.Add(carts);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(genres);
+            return View(carts);
         }
 
         //
-        // GET: /Genre/Edit/5
+        // GET: /Carts/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
-            Genres genres = db.GenresDbSet.Find(id);
-            if (genres == null)
+            Carts carts = db.CartsDbSet.Find(id);
+            if (carts == null)
             {
                 return HttpNotFound();
             }
-            return View(genres);
+            return View(carts);
         }
 
         //
-        // POST: /Genre/Edit/5
+        // POST: /Carts/Edit/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Genres genres)
+        public ActionResult Edit(Carts carts)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(genres).State = EntityState.Modified;
+                db.Entry(carts).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            //public actionResult Edit(int id =0)
-            //genres genre = db.genres.find(id);
-            //if (genre ==nul)
-            //{
-            //return redierect found
-
-            //}
-
-            return View(genres);
+            return View(carts);
         }
 
         //
-        // GET: /Genre/Delete/5
+        // GET: /Carts/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
-            Genres genres = db.GenresDbSet.Find(id);
-            if (genres == null)
+            Carts carts = db.CartsDbSet.Find(id);
+            if (carts == null)
             {
                 return HttpNotFound();
             }
-            return View(genres);
+            return View(carts);
         }
 
         //
-        // POST: /Genre/Delete/5
+        // POST: /Carts/Delete/5
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Genres genres = db.GenresDbSet.Find(id);
-            db.GenresDbSet.Remove(genres);
+            Carts carts = db.CartsDbSet.Find(id);
+            db.CartsDbSet.Remove(carts);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

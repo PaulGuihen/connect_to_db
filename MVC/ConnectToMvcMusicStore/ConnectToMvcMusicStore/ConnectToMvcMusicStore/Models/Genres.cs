@@ -14,13 +14,13 @@ namespace ConnectToMvcMusicStore.Models
         public string Name { get; set; }
         public string Description { get; set; }
     }
-    public class GenreDBContext : DbContext
+    public class GenresDBContext : DbContext
     {
         
 
-        static GenreDBContext()
+        static GenresDBContext()
         {
-            Database.SetInitializer<Models.GenreDBContext>(null);
+            Database.SetInitializer<Models.GenresDBContext>(null);
         }
 
 
