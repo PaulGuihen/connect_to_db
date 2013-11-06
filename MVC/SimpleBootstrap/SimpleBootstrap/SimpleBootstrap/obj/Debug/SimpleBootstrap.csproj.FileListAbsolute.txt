@@ -1,0 +1,15 @@
+C:\Users\Shaun\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\bin\SimpleBootstrap.dll
+C:\Users\Shaun\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\bin\SimpleBootstrap.pdb
+C:\Users\Shaun\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.dll
+C:\Users\Shaun\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.pdb
+C:\Users\Shaun\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.csprojResolveAssemblyReference.cache
+C:\Users\Paul\Dropbox\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\bin\SimpleBootstrap.dll
+C:\Users\Paul\Dropbox\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\bin\SimpleBootstrap.pdb
+C:\Users\Paul\Dropbox\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.csprojResolveAssemblyReference.cache
+C:\Users\Paul\Dropbox\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.dll
+C:\Users\Paul\Dropbox\Code\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.pdb
+C:\Users\Paul\Desktop\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\bin\SimpleBootstrap.dll
+C:\Users\Paul\Desktop\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\bin\SimpleBootstrap.pdb
+C:\Users\Paul\Desktop\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.csprojResolveAssemblyReference.cache
+C:\Users\Paul\Desktop\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.dll
+C:\Users\Paul\Desktop\MVC\SimpleBootstrap\SimpleBootstrap\SimpleBootstrap\obj\Debug\SimpleBootstrap.pdb
