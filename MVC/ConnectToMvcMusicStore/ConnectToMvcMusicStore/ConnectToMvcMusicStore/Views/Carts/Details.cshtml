@@ -10,20 +10,34 @@
     <legend>Carts</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Name)
+         @Html.DisplayNameFor(model => model.CartId)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
+        @Html.DisplayFor(model => model.CartId)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Description)
+         @Html.DisplayNameFor(model => model.AlbumId)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Description)
+        @Html.DisplayFor(model => model.AlbumId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Count)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Count)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DateCreated)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateCreated)
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.GenreId }) |
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RecordId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

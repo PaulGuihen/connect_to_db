@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ConnectToMvcMusicStore.Models
 {
-    public class Carts : Controller
+    public class Carts
     {
       
     
