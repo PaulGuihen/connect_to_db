@@ -13,9 +13,11 @@ namespace ConnectToMvcMusicStore.Models
       
     
         [Key]
-        public int GenreId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int RecordId { get; set; }
+        public string CartId { get; set; }
+        public int AlbumId { get; set; }
+        public int Count { get; set; }
+        public DateTime DateCreated { get; set; }
     }
     public class CartsDBContext : DbContext
     {
