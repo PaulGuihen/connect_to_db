@@ -16,9 +16,44 @@ namespace ConnectToMvcMusicStore.Controllers
         //
         // GET: /Orders/
 
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string searchString)
         {
-            return View(db.OrdersDbSet.ToList());
+            //create sorting parameters for orderdate and total colum
+
+            ViewBag.OrderDateSortParm = String.IsNullOrEmpty(sortOrder) ? "OrderDate_desc" : "";
+            ViewBag.TotalSortParm = sortOrder == "Total" ? "Total_desc" : "Total";
+            var Orders = from s in db.OrdersDbSet
+                           select s;
+
+            //setup linq query to search data 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                Orders = Orders.Where(s => s.Username.ToUpper().Contains(searchString.ToUpper())
+                                       || s.FirstName.ToUpper().Contains(searchString.ToUpper())
+                                        || s.LastName.ToUpper().Contains(searchString.ToUpper()
+                                       ));
+
+            }
+
+
+            // useing switch statement to order the data 
+
+            switch (sortOrder)
+            {
+                case "OrderDate_desc":
+                    Orders = Orders.OrderByDescending(s => s.OrderDate);
+                    break;
+                case "Total":
+                    Orders = Orders.OrderBy(s => s.Total);
+                    break;
+                case "Total_desc":
+                    Orders = Orders.OrderByDescending(s => s.Total);
+                    break;
+                default:
+                    Orders = Orders.OrderBy(s => s.OrderDate);
+                    break;
+            }
+            return View(Orders.ToList());
         }
 
         //
