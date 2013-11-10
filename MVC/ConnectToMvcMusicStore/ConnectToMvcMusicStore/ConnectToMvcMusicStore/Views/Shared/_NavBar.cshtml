@@ -1,0 +1,36 @@
+﻿
+@helper ActiveItem(string actionName, string controllerName, string areaName)
+{
+    if (ViewContext.RouteData.Values["action"].ToString() == actionName &&
+            ViewContext.RouteData.Values["controller"].ToString() == controllerName &&
+            (ViewContext.RouteData.DataTokens["area"] == null || ViewContext.RouteData.DataTokens["area"].ToString() == areaName))
+    {
+        @:active
+    }
+}
+ 
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Pauls Music Store</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="@ActiveItem("Orders", "Index", null)">@Html.ActionLink("Orders", "Index", "Orders")</li>
+                <li class="@ActiveItem("OrderDetails", "Index", null)">@Html.ActionLink("OrderDetails", "Index", "OrderDetails")</li>
+                <li class="@ActiveItem("Artists", "Index", null)">@Html.ActionLink("Artists", "Index", "Artists")</li>
+                 <li class="@ActiveItem("Genre", "Index", null)">@Html.ActionLink("Genre", "Index", "Genre")</li>
+                <li class="@ActiveItem("Carts", "Index", null)">@Html.ActionLink("Carts", "Index", "Carts")</li>
+                <li class="@ActiveItem("Contact", "Index", null)">@Html.ActionLink("Contact", "Index", "Home")</li>
+               
+                            
+
+            </ul>
+        </div>
+    </div>
+</div>
