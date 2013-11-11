@@ -182,6 +182,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlbumsController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\CartsController.cs" />
     <Compile Include="Controllers\Default1Controller.cs" />
@@ -194,6 +195,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Albums.cs" />
     <Compile Include="Models\Artists.cs" />
     <Compile Include="Models\Carts.cs" />
     <Compile Include="Models\Genres.cs" />
@@ -406,6 +408,11 @@
     <Content Include="Views\Carts\Delete.cshtml" />
     <Content Include="Views\Shared\_html5shiv.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Albums\Index.cshtml" />
+    <Content Include="Views\Albums\Details.cshtml" />
+    <Content Include="Views\Albums\Create.cshtml" />
+    <Content Include="Views\Albums\Edit.cshtml" />
+    <Content Include="Views\Albums\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
